@@ -1,0 +1,24 @@
+{
+  "name": "sskills",
+  "skills": [
+    "./skills/ask-skills",
+    "./skills/codebase-design",
+    "./skills/diagnosing-bugs",
+    "./skills/domain-modeling",
+    "./skills/grill-me",
+    "./skills/grill-with-docs",
+    "./skills/grilling",
+    "./skills/handoff",
+    "./skills/implement",
+    "./skills/improve-codebase-architecture",
+    "./skills/prototype",
+    "./skills/resolving-merge-conflicts",
+    "./skills/review",
+    "./skills/setup-agent-skills",
+    "./skills/tdd",
+    "./skills/to-issues",
+    "./skills/to-prd",
+    "./skills/triage",
+    "./skills/writing-great-skills"
+  ]
+}

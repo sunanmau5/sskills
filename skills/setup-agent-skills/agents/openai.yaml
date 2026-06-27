@@ -1,0 +1,7 @@
+interface:
+  display_name: "Setup Agent Skills"
+  short_description: "Configure repo docs for agent skills"
+  default_prompt: "Use $setup-agent-skills to configure this repo for the engineering skills."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Write a session handoff document"
+  default_prompt: "Use $handoff to compact this conversation into a handoff document."
+
+policy:
+  allow_implicit_invocation: false
