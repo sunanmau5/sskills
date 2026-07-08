@@ -5,15 +5,14 @@ description: Create a git commit from already-staged files without changing the 
 
 # Commit
 
-Create a commit from the current git index only. Do not stage, unstage, or modify files as part of this skill.
+Create a commit from the current git index only. Do not stage, unstage, or modify files as part of this skill, even if related edits are present in the working tree.
 
 ## Workflow
 
 1. Confirm the repository state from the current working directory.
 2. Run `git diff --cached` to inspect the staged changes.
-3. Run `git branch --show-current` to check whether the branch name contains a ticket identifier such as `MP-1234`.
-4. Derive a commit message from the staged diff.
-5. Run `git commit -m` using only the staged changes.
+3. Derive a commit message from the staged diff.
+4. Run `git commit -m` using only the staged changes.
 
 If there are no staged changes, stop and tell the user that there is nothing to commit.
 
@@ -48,8 +47,5 @@ Prefer a short subject that describes the primary change. Add a body only for no
 
 ## Execution Notes
 
-- Do not stage any files, even if related edits are present in the working tree
-- Do not rewrite the user's staged set
 - Do not use interactive git commands
-- Preserve unrelated unstaged changes
 - After committing, report the final commit message back to the user

@@ -1,6 +1,6 @@
 ---
 name: recipe
-description: Convert a recipe URL or pasted recipe text into the user's Obsidian recipe markdown format. Use when Codex needs to extract recipe content from a webpage or raw text, convert measurements to metric, maintain menu.md wiki links, and create or return a recipe note using the user's current no-frontmatter format.
+description: Convert a recipe URL, pasted recipe text, or dish name into the user's Obsidian recipe markdown format. Use when the user wants to add, convert, import, or clean up a recipe.
 ---
 
 # Recipe

@@ -43,7 +43,7 @@ Use a quiet Ayu Mirage terminal/editor style:
 Rules:
 
 - Prefer a nvim/tmux/editor shell: sidebar slide navigator, tabbar, main document area
-- Keep the design minimal; avoid decorative neobrutalism, gradients, glassmorphism, or “AI deck” styling
+- Keep the design minimal; avoid decorative neobrutalism, gradients, glassmorphism, or "AI deck" styling
 - Use code snippets as first-class content blocks
 - Disable font ligatures globally and on `pre`/`code`
 - Use ASCII arrows only: `->` and `<-`
@@ -79,8 +79,8 @@ Use both `event.key` and `event.code` for `j/k` so keyboard layouts and ligature
 
 Tone should be calm, precise, and practical:
 
-- Prefer “current gap”, “scope”, “setup”, “boundary”, “outside scope”
-- Avoid dramatic wording like “broken”, “must”, “failure”, “not staging on your laptop”, “too often”
+- Prefer "current gap", "scope", "setup", "boundary", "outside scope"
+- Avoid dramatic wording like "broken", "must", "failure", "not staging on your laptop", "too often"
 - Do not use periods on titles
 - If body text is one sentence, omit the final period
 - If a bullet is one sentence, omit the final period
@@ -103,7 +103,7 @@ When modifying an existing deck:
 
 - Preserve user edits unless the requested change requires touching them
 - Do not run broad rewrite scripts for structural changes unless the user approves
-- Prefer small `apply_patch` edits for individual slide changes
+- Prefer small targeted edits for individual slide changes
 - After changing navigation or slide count, verify all `data-file` entries and the slide count
 
 ## Verification Checklist
