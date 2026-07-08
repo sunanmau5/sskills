@@ -90,11 +90,6 @@ Choose the most appropriate section. If a recipe could belong in more than one s
 
 ## Writing Style
 
-- Keep prose concise and direct
-- Never use en dashes or em dashes
-- Use a plain hyphen if a dash is needed
-- Single-sentence ordered and unordered list items do not end with a period
-- Do not add unnecessary introductions or commentary to recipe files
 - Keep useful tips or caveats in parentheses in the relevant step
 - Use bold text only for critical warnings when it prevents a likely mistake
 

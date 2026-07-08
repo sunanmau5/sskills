@@ -56,8 +56,8 @@ Rules:
 
 - The slide shell should use the full 16:9 stage; do not add an unnecessary outer card/frame
 - Use a persistent left sidebar as a slide navigator
-- Generate sidebar entries from each slide’s `data-file`, in DOM order
-- The active tab should mirror the current slide’s `data-file`
+- Generate sidebar entries from each slide's `data-file`, in DOM order
+- The active tab should mirror the current slide's `data-file`
 - Use `data-file` values as semantic filenames, not fake implementation files
 - Avoid numbering filenames unless the user asks for numbered navigation
 - For split slides, use an equal 50/50 content split by default
@@ -83,7 +83,6 @@ Tone should be calm, precise, and practical:
 - Avoid dramatic wording like "broken", "must", "failure", "not staging on your laptop", "too often"
 - Do not use periods on titles
 - If body text is one sentence, omit the final period
-- If a bullet is one sentence, omit the final period
 - Keep slide copy minimal for speaker-led decks
 - Do not manually insert line breaks inside prose; let CSS wrapping handle it
 - Preserve intentional line breaks in code blocks
