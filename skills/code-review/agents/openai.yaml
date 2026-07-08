@@ -1,0 +1,7 @@
+interface:
+  display_name: "Code Review"
+  short_description: "Two-axis review of changes since a fixed point"
+  default_prompt: "Use $code-review to review the changes since the given fixed point."
+
+policy:
+  allow_implicit_invocation: false

@@ -2,7 +2,7 @@
 
 Sunan skills: personal coding-agent skills for Codex and Claude
 
-Adapted from [mattpocock/skills](https://github.com/mattpocock/skills)
+Adapted from [mattpocock/skills](https://github.com/mattpocock/skills) (tracks [v1.1.0](https://github.com/mattpocock/skills/releases/tag/v1.1.0))
 
 ## Setup
 

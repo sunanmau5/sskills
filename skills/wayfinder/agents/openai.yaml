@@ -1,0 +1,7 @@
+interface:
+  display_name: "Wayfinder"
+  short_description: "Chart or work a map for a large effort"
+  default_prompt: "Use $wayfinder to chart or work the map for this effort."
+
+policy:
+  allow_implicit_invocation: false
