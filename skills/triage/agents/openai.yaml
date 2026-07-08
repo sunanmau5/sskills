@@ -1,7 +1,0 @@
-interface:
-  display_name: "Triage"
-  short_description: "Triage issues and external PRs"
-  default_prompt: "Use $triage to triage issues or external PRs."
-
-policy:
-  allow_implicit_invocation: false

@@ -1,7 +1,0 @@
-interface:
-  display_name: "Ask Skills"
-  short_description: "Choose the right skill or workflow"
-  default_prompt: "Use $ask-skills to choose the right skill or workflow for this situation."
-
-policy:
-  allow_implicit_invocation: false
