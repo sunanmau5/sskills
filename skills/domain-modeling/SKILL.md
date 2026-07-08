@@ -27,11 +27,11 @@ If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The ma
 /
 ├── CONTEXT-MAP.md
 ├── docs/
-│   └── adr/                          <- system-wide decisions
+│   └── adr/                          ← system-wide decisions
 ├── src/
 │   ├── ordering/
 │   │   ├── CONTEXT.md
-│   │   └── docs/adr/                 <- context-specific decisions
+│   │   └── docs/adr/                 ← context-specific decisions
 │   └── billing/
 │       ├── CONTEXT.md
 │       └── docs/adr/

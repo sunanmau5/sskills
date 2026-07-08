@@ -1,7 +1,7 @@
 interface:
   display_name: "Implement"
-  short_description: "Implement work from a PRD or issue"
-  default_prompt: "Use $implement to implement the described PRD or issue."
+  short_description: "Implement work from a spec or ticket"
+  default_prompt: "Use $implement to implement the described spec or ticket."
 
 policy:
   allow_implicit_invocation: false

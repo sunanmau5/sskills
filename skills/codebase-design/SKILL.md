@@ -33,10 +33,10 @@ Use these terms exactly - don't substitute "component," "service," "API," or "bo
 
 ```
 ┌─────────────────────┐
-│   Small Interface   │  <- Few methods, simple params
+│   Small Interface   │  ← Few methods, simple params
 ├─────────────────────┤
 │                     │
-│  Deep Implementation│  <- Complex logic hidden
+│  Deep Implementation│  ← Complex logic hidden
 │                     │
 └─────────────────────┘
 ```
@@ -45,9 +45,9 @@ Use these terms exactly - don't substitute "component," "service," "API," or "bo
 
 ```
 ┌─────────────────────────────────┐
-│       Large Interface           │  <- Many methods, complex params
+│       Large Interface           │  ← Many methods, complex params
 ├─────────────────────────────────┤
-│  Thin Implementation            │  <- Just passes through
+│  Thin Implementation            │  ← Just passes through
 └─────────────────────────────────┘
 ```
 
