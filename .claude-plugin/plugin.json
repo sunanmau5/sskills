@@ -20,6 +20,7 @@
     "./skills/tdd",
     "./skills/to-spec",
     "./skills/to-tickets",
-    "./skills/wayfinder"
+    "./skills/wayfinder",
+    "./skills/writing-great-skills"
   ]
 }
