@@ -1,6 +1,6 @@
 ---
 name: setup-agent-skills
-description: Configure this repo for the engineering skills - set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.
+description: Configure this repo for the engineering skills - set up its issue tracker and domain doc layout. Run once before first use of the other engineering skills.
 disable-model-invocation: true
 ---
 
@@ -9,7 +9,6 @@ disable-model-invocation: true
 Scaffold the per-repo configuration that the engineering skills assume:
 
 - **Issue tracker** - where issues live (GitHub by default; local markdown is also supported out of the box)
-- **Triage labels** - the strings used for the five canonical triage roles
 - **Domain docs** - where `CONTEXT.md` and ADRs live, and the consumer rules for reading them
 
 This is a prompt-driven skill, not a deterministic script. Explore, present what you found, confirm with the user, then write.
@@ -29,7 +28,7 @@ Look at the current repo to understand its starting state. Read whatever exists;
 
 ### 2. Present findings and ask
 
-Summarise what's present and what's missing. Then walk the user through the three decisions **one at a time** - present a section, get the user's answer, then move to the next. Don't dump all three at once.
+Summarise what's present and what's missing. Then walk the user through the two decisions **one at a time** - present a section, get the user's answer, then move to the next. Don't dump both at once.
 
 Assume the user does not know what these terms mean. Each section starts with a short explainer (what it is, why these skills need it, what changes if they pick differently). Then show the choices and the default.
 
@@ -44,27 +43,7 @@ Default posture: these skills were designed for GitHub. If a `git remote` points
 - **Local markdown** - issues live as files under `.scratch/<feature>/` in this repo (good for solo projects or repos without a remote)
 - **Other** (Jira, Linear, etc.) - ask the user to describe the workflow in one paragraph; the skill will record it as freeform prose
 
-If - and only if - the user picked **GitHub** or **GitLab**, ask one follow-up:
-
-> Explainer: Open-source repos often receive feature requests as pull requests, not just issues - a PR is an issue with attached code. If you turn this on, `/triage` pulls *external* PRs into the same queue and runs them through the same labels and states as issues (collaborators' in-flight PRs are left alone). Leave it off if PRs aren't a request surface for you.
-
-- **PRs as a request surface** - yes / no (default: no). Record the answer in `docs/agents/issue-tracker.md`. For local-markdown and other trackers, skip this question - there are no PRs.
-
-**Section B - Triage label vocabulary.**
-
-> Explainer: When a skill publishes or processes an issue, it moves it through a state machine - needs evaluation, waiting on reporter, ready for an AFK agent to pick up, ready for a human, or won't fix. To do that, it needs to apply labels (or the equivalent in your issue tracker) that match strings *you've actually configured*. If your repo already uses different label names (e.g. `bug:triage` instead of `needs-triage`), map them here so the skills apply the right ones instead of creating duplicates.
-
-The five canonical roles:
-
-- `needs-triage` - maintainer needs to evaluate
-- `needs-info` - waiting on reporter
-- `ready-for-agent` - fully specified, AFK-ready (an agent can pick it up with no human context)
-- `ready-for-human` - needs human implementation
-- `wontfix` - will not be actioned
-
-Default: each role's string equals its name. Ask the user if they want to override any. If their issue tracker has no existing labels, the defaults are fine.
-
-**Section C - Domain docs.**
+**Section B - Domain docs.**
 
 > Explainer: Some skills (`tdd`, `domain-modeling`) read a `CONTEXT.md` file to learn the project's domain language, and `docs/adr/` for past architectural decisions. They need to know whether the repo has one global context or multiple (e.g. a monorepo with separate frontend/backend contexts) so they look in the right place.
 
@@ -78,7 +57,7 @@ Confirm the layout:
 Show the user a draft of:
 
 - The `## Agent skills` block to add to whichever of `CLAUDE.md` / `AGENTS.md` is being edited (see step 4 for selection rules)
-- The contents of `docs/agents/issue-tracker.md`, `docs/agents/triage-labels.md`, `docs/agents/domain.md`
+- The contents of `docs/agents/issue-tracker.md`, `docs/agents/domain.md`
 
 Let them edit before writing.
 
@@ -101,23 +80,18 @@ The block:
 
 ### Issue tracker
 
-[one-line summary of where issues are tracked, plus whether external PRs are a triage surface]. See `docs/agents/issue-tracker.md`.
-
-### Triage labels
-
-[one-line summary of the label vocabulary]. See `docs/agents/triage-labels.md`.
+[one-line summary of where issues are tracked]. See `docs/agents/issue-tracker.md`.
 
 ### Domain docs
 
 [one-line summary of layout - "single-context" or "multi-context"]. See `docs/agents/domain.md`.
 ```
 
-Then write the three docs files using the seed templates in this skill folder as a starting point:
+Then write the two docs files using the seed templates in this skill folder as a starting point:
 
 - [issue-tracker-github.md](./issue-tracker-github.md) - GitHub issue tracker
 - [issue-tracker-gitlab.md](./issue-tracker-gitlab.md) - GitLab issue tracker
 - [issue-tracker-local.md](./issue-tracker-local.md) - local-markdown issue tracker
-- [triage-labels.md](./triage-labels.md) - label mapping
 - [domain.md](./domain.md) - domain doc consumer rules + layout
 
 For "other" issue trackers, write `docs/agents/issue-tracker.md` from scratch using the user's description.
